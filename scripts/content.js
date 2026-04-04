@@ -370,7 +370,7 @@ const answers = {
     "50% cho chi tiêu thiết yếu, 30% cho hưởng thụ, 20% cho tiết kiệm."
   ],
   "Nhà trường đã đưa ra những cam kết nào để đồng hành cùng sinh viên trong năm học mới?": [
-    "Đổi mới chương trình đào tạo, nâng cấp cơ sở vật chất, mở rộng hợp tác quốc "
+    "Đổi mới chương trình đào tạo, nâng cấp cơ sở vật chất, mở rộng hợp tác quốc tế"
   ],
   "Đại học Bách khoa Hà Nội đã vinh dự được Nhà nước trao tặng danh hiệu Anh hùng lao động trong thời kỳ đổi mới vào thời gian nào?": [
     "Tháng 8/2000"
@@ -813,7 +813,7 @@ const answers = {
   ],
   "Sinh viên có quyền từ chối giao dịch nào?": [
     "Giao dịch lừa đảo, không rõ ràng"
-  ]
+  ],
 }
 
 const totalQuestions = Object.keys(answers).length;
