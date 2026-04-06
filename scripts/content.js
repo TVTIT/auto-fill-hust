@@ -814,6 +814,9 @@ const answers = {
   "Sinh viên có quyền từ chối giao dịch nào?": [
     "Giao dịch lừa đảo, không rõ ràng"
   ],
+  "Sinh viên có quyền nào sau đây theo Luật Giáo dục Đại học?": [
+    "Được tôn trọng và bảo vệ danh dự, nhân phẩm"
+  ]
 }
 
 const totalQuestions = Object.keys(answers).length;
@@ -866,10 +869,13 @@ async function autoFillFormBasedOnQuestion() {
   // clickOption(exep10);
   // clickOption(exep11);
 
+  questionCount = 0;
+
   spans.forEach((span) => {
     const questionText = span.innerText.trim().replace(/\s+/g, " ");
 
     if (answers[questionText]) {
+      questionCount++;
       const answersList = Array.isArray(answers[questionText])
         ? answers[questionText]
         : [answers[questionText]];
@@ -891,6 +897,7 @@ async function autoFillFormBasedOnQuestion() {
       });
     }
   });
+  alert(`Đã điền ${questionCount} câu hỏi (không tính câu tự luận)`);
 }
 
 // Lắng nghe tín hiệu từ popup.js
@@ -900,7 +907,6 @@ chrome.runtime.onMessage.addListener(async (message) => {
 
     try {
       await autoFillFormBasedOnQuestion();
-      alert("Filled success!!");
     } catch (error) {
       console.error("Error filling the form:", error);
     }
