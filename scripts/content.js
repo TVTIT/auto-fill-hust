@@ -1,457 +1,604 @@
 // Danh sách các câu trả lời đã biết, mỗi câu có thể có nhiều đáp án đúng
 const answers = {
-  // đáp án quy chế 2025.1
-  "Đâu là một trong những trách nhiệm của sinh viên được quy định trong Quy chế?": [
-    "Đóng học phí, bảo hiểm y tế và các khoản phí khác đầy đủ, đúng quy định."
+  "Sinh viên thuộc diện Cử tuyển nộp và nhận giấy xác nhận được hưởng học bổng chính sách tại đâu và vào thời gian nào?": [
+    "Tại Phòng 102 - Nhà C1 vào đầu các học kỳ"
   ],
-  "Sinh viên có quyền khiếu nại về kết quả đánh giá rèn luyện hoặc các hình thức khen thưởng, kỷ luật lên đâu?": [
-    "Giám đốc Đại học (qua Ban Công tác sinh viên)."
+  "Quy định về việc quản lý và sử dụng Thẻ sinh viên khi vào trường như thế nào?": [
+    "Phải đeo thẻ sinh viên; Tuyệt đối không cho người khác mượn hoặc mượn thẻ người khác; Không được cầm cố thẻ sinh viên"
   ],
-  "Nếu sinh viên không tham gia đánh giá điểm rèn luyện tại một học kỳ, kết quả rèn luyện của học kỳ đó sẽ bị xếp loại gì?": [
-    "Kém."
+  "Mức giá trị của Học bổng KKHT loại Giỏi (loại B) được tính như thế nào?": [
+    "Bằng 1,2 lần mức học bổng loại Khá"
   ],
-  "Theo số liệu khảo sát, tỷ lệ sinh viên tại ĐHBK Hà Nội bị cảnh báo học tập là khoảng bao nhiêu?": [
-    "Khoảng 9%."
+  "Nếu trung bình cộng điểm của người hướng dẫn và người phản biện đồ án tốt nghiệp cho dưới 5,0 thì sinh viên sẽ bị xử lý ra sao?": [
+    "Không được phép tham gia bảo vệ và điểm bảo vệ tại hội đồng tính là 0 điểm"
   ],
-  "Sinh viên bị xếp loại rèn luyện Yếu/Kém trong hai học kỳ liên tiếp sẽ phải đối mặt với hình thức xử lý nào?": [
-    "Bị buộc thôi học"
+  "Sau thời gian nào hàng ngày, sinh viên không được tự ý tụ tập tại các khu vực công cộng thuộc khuôn viên Nhà trường nếu không được phép?": [
+    "Sau 18h00"
   ],
-  "Chương trình đào tạo (CTĐT) mới nào được giới thiệu trong Quy chế 2025, thuộc nhóm chương trình ELITECH?": [
-    "Chương trình đào tạo Tài năng"
+  "Sinh viên phải đăng ký tối thiểu bao nhiêu tín chỉ trong học kỳ lấy điểm xét học bổng để không bị loại (trừ HK1 năm thứ nhất)?": [
+    "Tối thiểu 12 tín chỉ"
   ],
-  "Hành vi \"Tổ chức đánh bạc\" lần đầu sẽ bị xử lý như thế nào?": [
-    "Khiển trách và phải bồi thường."
+  "Quy đổi 1 TCHT học phần \"Lý thuyết / Bài tập\" hệ đại học chính quy tương ứng bằng bao nhiêu TCHP?": [
+    "1,0 TCHP"
   ],
-  "Cán bộ Quản lý lớp sinh viên (QLLSV) có thể là những ai?": [
-    "Cán bộ giảng dạy, cán bộ hành chính hoặc cán bộ kỹ thuật đang công tác tại đơn vị quản ngành."
+  "Pháp lệnh của Ủy ban Thường vụ Quốc hội quy định ưu đãi người có công với cách mạng được áp dụng trong xét miễn giảm học phí là văn bản nào?": [
+    "Pháp lệnh số 02/2020/UBTVQH14 ngày 09/12/2020"
   ],
-  "Quy định nào về cấu trúc học kỳ chính đã được loại bỏ trong Quy chế 2025?": [
-    "Một học kỳ chính có thể được chia thành 2 đợt A và B"
+  "Quy định về chương trình ngoại ngữ cơ bản K71 KHÔNG áp dụng cho đối tượng sinh viên nào?": [
+    "Sinh viên ngành Ngôn ngữ Anh"
   ],
-  "Sinh viên đã nhận học bổng KKHT trong một học kỳ có được xét cấp học bổng Trần Đại Nghĩa trong cùng học kỳ đó không?": [
-    "Không, sinh viên đã nhận học bổng KKHT sẽ không được xét cấp học bổng Trần Đại Nghĩa"
+  "Chứng chỉ tiếng Anh quốc tế dùng để xét công nhận chuẩn đầu ra phải đảm bảo điều kiện thời hạn như thế nào?": [
+    "Cấp trong vòng 2 năm tính đến thời điểm xét chuẩn ngoại ngữ đầu ra và còn hiệu lực"
   ],
-  "Tham gia \"Sinh hoạt công dân\" do nhà trường tổ chức sẽ được ghi nhận bao nhiêu điểm rèn luyện?": [
-    "6 điểm"
+  "Sinh viên đăng ký học lại học phần đã đạt điểm D để cải thiện điểm CPA có phải đóng học phí không?": [
+    "Phải đóng 100% học phí theo số TCHP đăng ký"
   ],
-  "Vào năm 1967, Chính phủ đã quyết định tách hai khoa nào từ Trường Đại học Bách khoa Hà Nội để thành lập các trường đại học riêng?": [
-    "Khoa Xây dựng và Khoa Mỏ - Địa chất"
+  "Tân sinh viên K71 đăng ký Học bổng Trần Đại Nghĩa (Nhóm 1) theo điểm thi Đánh giá tư duy (TSA) cần đạt điểm xét tuyển tối thiểu là bao nhiêu?": [
+    "Từ 60,00/100 trở lên"
   ],
-  "Mục đích chính của Học bổng Trần Đại Nghĩa là gì?": [
-    "Hỗ trợ sinh viên có hoàn cảnh kinh tế đặc biệt khó khăn và có kết quả học tập, rèn luyện tốt"
+  "Học phí đối với các lớp Vừa làm vừa học (VLVH) có sĩ số từ 10 đến 14 sinh viên áp dụng hệ số nhân học phí là bao nhiêu?": [
+    "Hệ số 1,5"
   ],
-  "Việc tham gia khóa đào tạo kỹ năng nghề nghiệp, kỹ năng bổ trợ chuyên môn được cộng tối đa bao nhiêu điểm?": [
-    "6 điểm"
+  "Văn phòng làm việc của Hội Sinh viên Đại học Bách khoa Hà Nội đặt tại vị trí nào?": [
+    "Phòng 101 - Tòa nhà B8"
   ],
-  "Theo thang điểm 100, sinh viên đạt từ 80 đến dưới 90 điểm rèn luyện sẽ được xếp loại gì?": [
-    "Tốt"
+  "Chuẩn ngoại ngữ đầu ra đối với Chương trình đào tạo Tiếng Hàn Khoa học và Công nghệ quy định ra sao?": [
+    "Ngoại ngữ 1 (Tiếng Hàn) đạt tối thiểu Bậc 5, Ngoại ngữ 2 đạt tối thiểu Bậc 3"
   ],
-  "Việc tham gia hiến máu nhân đạo do Đại học và các tổ chức hợp pháp phát động được cộng bao nhiêu điểm?": [
-    "6 điểm"
+  "Sinh viên đang học cùng lúc hai chương trình đào tạo sẽ bị dừng học chương trình thứ hai khi nào?": [
+    "Khi bị cảnh báo học tập ở chương trình thứ nhất"
   ],
-  "Tổ tư vấn và hỗ trợ sinh viên, nơi giúp sinh viên giải quyết các khó khăn về học tập và tâm lý, là một bộ phận trực thuộc đơn vị nào?": [
-    "Ban Công tác sinh viên"
+  "Theo Quy chế đào tạo, \"Học phần tiên quyết\" của một học phần B được hiểu như thế nào?": [
+    "Sinh viên phải học xong học phần A và đạt điểm đạt trở lên mới được đăng ký học học phần B"
   ],
-  "Quyền lợi nào sau đây KHÔNG phải của Cố vấn học tập?": [
-    "Được quyết định miễn giảm các khoản phí cho sinh viên có hoàn cảnh khó khăn"
+  "Mức học phí áp dụng đối với sinh viên quốc tế học các chương trình đào tạo bằng tiếng Anh được tính như thế nào?": [
+    "Bằng 1,5 lần mức học phí quy định tương ứng"
   ],
-  "Quy định nào về việc buộc thôi học do không nộp học phí đã bị loại bỏ trong Quy chế 2025?": [
-    "Buộc thôi học nếu bị đình chỉ lần thứ 2 liên tiếp do không nộp học phí"
+  "Sinh viên không đáp ứng điều kiện phân loại trình độ ngoại ngữ đầu vào sẽ được xếp học như thế nào?": [
+    "Được xếp học từ học phần đầu tiên của khối Ngoại ngữ cơ bản tương ứng"
   ],
-  "Học phí của lớp học phần rút gọn được tính như thế nào?": [
-    "Bằng 150% so với lớp học phần bình thường"
+  "Sinh viên học cùng lúc hai chương trình đào tạo (bằng kép) cần lưu ý quy định gì về việc đăng ký tốt nghiệp?": [
+    "Bắt buộc phải đăng ký tốt nghiệp đồng thời trong cùng một đợt cho cả hai CTĐT"
   ],
-  "Thay đổi quan trọng nhất tại Điều 17 về \"Chuyển chương trình đào tạo\" là gì?": [
-    "Bỏ quy định \"Không cho phép chuyển CTĐT đối với sinh viên đã học từ năm thứ hai trở đi\""
+  "Mức Học bổng Chính phủ (Nghị định 179/2026/NĐ-CP) hỗ trợ hàng tháng cho sinh viên ngành Kỹ thuật then chốt & Công nghệ chiến lược là bao nhiêu?": [
+    "5.500.000 đồng / tháng"
   ],
-  "Theo Quy chế, vị trí của sinh viên trong Đại học Bách khoa Hà Nội là gì?": [
-    "Là trung tâm các hoạt động giáo dục, đào tạo, nghiên cứu khoa học, đổi mới sáng tạo và khởi nghiệp."
+  "Văn phòng Quản lý Ký túc xá Bách khoa và Trung tâm Dịch vụ & Hỗ trợ Bách khoa nằm tại đâu?": [
+    "Tầng 1 - Nhà B9"
   ],
-  "Theo khảo sát, nhóm học phần nào được nhiều sinh viên đánh giá là \"trở ngại\" trong năm học đầu tiên?": [
-    "Giải tích 1, Đại số, Triết học."
+  "Chuẩn ngoại ngữ đầu ra đối với CTĐT Tiếng Anh Khoa học Kỹ thuật và Công nghệ là gì?": [
+    "Ngoại ngữ 1 đạt tối thiểu Bậc 5, Ngoại ngữ 2 đạt tối thiểu Bậc 3"
   ],
-  "Đâu là Cổng thông tin việc làm trực tuyến chính thức của Đại học Bách khoa Hà Nội, nơi kết nối sinh viên với các nhà tuyển dụng?": [
-    "work.hust.edu.vn"
+  "Sinh viên đoạt giải trong các cuộc thi chính thức cấp Quốc gia hoặc Quốc tế được cộng tối đa bao nhiêu điểm rèn luyện ở Mục 5.3?": [
+    "Cộng 20 điểm"
   ],
-  "Thời gian trả lời khiếu nại của sinh viên về kết quả đánh giá rèn luyện không được quá bao nhiêu ngày kể từ ngày nhận đơn?": [
-    "7 ngày"
+  "Sinh viên có hành vi vi phạm kỷ luật khi thi hộ hoặc nhờ thi hộ sẽ bị trừ bao nhiêu điểm rèn luyện?": [
+    "Trừ 20 điểm"
   ],
-  "Trường Đại học Bách khoa Hà Nội được thành lập theo nghị định 147/NĐ vào ngày tháng năm nào?": [
-    "06/03/1956"
+  "Mức Học bổng Chính phủ hỗ trợ hàng tháng cho Học viên Thạc sĩ ngành Vi mạch bán dẫn và các ngành Khoa học cơ bản là bao nhiêu?": [
+    "8.400.000 đồng / tháng"
   ],
-  "Đâu là một trong các nội dung đánh giá kết quả rèn luyện của sinh viên?": [
-    "Phẩm chất công dân, trách nhiệm và quan hệ với cộng đồng."
+  "Khung điểm CPA quy đổi sang xếp loại học lực \"Giỏi\" theo Quy chế đào tạo là bao nhiêu?": [
+    "3,20 đến 3,59"
   ],
-  "Khi có khiếu nại về kết quả rèn luyện, sinh viên có khoảng thời gian khiếu nại tối thiểu là bao nhiêu ngày?": [
-    "7 ngày"
+  "Chuẩn ngoại ngữ đầu ra xét tốt nghiệp đối với các chương trình chất lượng cao ELITECH giảng dạy bằng tiếng Pháp là gì?": [
+    "Chứng chỉ tiếng Pháp DELF B2 hoặc TCF tương đương"
   ],
-  "Khi cần trao đổi hoặc phản ánh công việc với giáo viên, cán bộ hay các đơn vị trong Trường, sinh viên phải sử dụng loại email nào?": [
-    "Email do Đại học BKHN cấp."
+  "Sinh viên được cấp Học bổng Chính phủ theo Nghị định 179 có được đồng thời hưởng thêm chính sách học bổng khác từ nguồn ngân sách nhà nước không?": [
+    "Không, chỉ được lựa chọn hưởng 01 chính sách học bổng từ nguồn ngân sách nhà nước"
   ],
-  "Kết quả rèn luyện của sinh viên được phân loại \"Xuất sắc\" khi đạt mức điểm nào?": [
-    "Từ 90 đến 100 điểm."
+  "Học phí tại Đại học Bách khoa Hà Nội được tính dựa trên đơn vị đo lường nào?": [
+    "Số tín chỉ học phí (TCHP) của các học phần đăng ký"
   ],
-  "Công cụ nào được sử dụng để hỗ trợ thực hiện quy trình đánh giá kết quả rèn luyện cho sinh viên?": [
-    "Hệ thống sổ tay công tác sinh viên trực tuyến (iCTSV)."
+  "Sinh viên có được tự ý hủy lớp học phần ngoại ngữ cơ bản đã đăng ký học song hành trong học kỳ không?": [
+    "Không được phép hủy, trừ trường hợp xin rút hoặc chủ động rút toàn bộ đăng ký học tập trong học kỳ"
   ],
-  "Theo Quy chế đào tạo 2025, đối tượng áp dụng nào được bổ sung rõ ràng vào định nghĩa \"người học\"?": [
-    "Nghiên cứu sinh (NCS)"
+  "Sinh viên nộp hồ sơ văn bản giấy đăng ký Học bổng Trần Đại Nghĩa tại đâu?": [
+    "Phòng C1 - 102 (gặp cô Nghiêm Thị Kim Chi)"
   ],
-  "Hình thức kỷ luật \"Khiển trách\" áp dụng đối với trường hợp nào?": [
-    "Sinh viên có hành vi vi phạm lần đầu nhưng ở mức độ nhẹ."
+  "Các học phần Tiếng Anh cơ sở (NNCB) có được tính điểm vào GPA và CPA toàn khóa không?": [
+    "Không tính vào GPA và CPA, chỉ ghi nhận điểm đạt (R) hoặc không đạt"
   ],
-  "Mức học bổng KKHT loại Giỏi bằng bao nhiêu lần mức học bổng loại Khá?": [
-    "1.2 lần"
+  "Chứng chỉ tiếng Trung HSK 4 kết hợp HSKK trung cấp được Phụ lục VIII xếp vào Bậc mấy theo Khung 6 bậc?": [
+    "Bậc 3"
   ],
-  "Triết lý cốt lõi mà mỗi người Bách khoa cần mang theo suốt đời là gì?": [
-    "\"Trách nhiệm với Đất nước – Cam kết với Cộng đồng\""
+  "Sinh viên được điều động vào lực lượng vũ trang nghỉ học tạm thời thì thời gian nghỉ được tính như thế nào?": [
+    "Không tính vào thời gian học chậm tiến độ"
   ],
-  "Đâu là một trong những hành động được khuyên để nhận diện và phòng tránh lừa đảo tài chính?": [
-    "Không cung cấp thông tin cá nhân khi chưa xác định chính xác website, ứng dụng và danh tính tư vấn viên."
+  "Vị trí của Tiệm giặt là công cộng thuộc Ký túc xá Bách khoa được đặt ở đâu?": [
+    "Nhà hồng xanh phía sau hội trường B6 (cạnh B7) - sát đường Trần Đại Nghĩa"
   ],
-  "Điều kiện để sinh viên được giao đề tài Đồ án/Khóa luận tốt nghiệp (ĐATN) theo Quy chế 2025 là gì?": [
-    "Đảm bảo các điều kiện về học phần học trước, tiên quyết, song hành"
+  "Chứng chỉ tiếng Pháp TCF quy đổi tương đương Bậc 3 (B1) yêu cầu điểm số TCF nằm trong khoảng nào?": [
+    "300 - 399 điểm"
   ],
-  "Theo Quy chế 2025, hai học phần được coi là tương đương khi có nội dung chuyên môn trùng lặp ở mức nào?": [
-    "Tối thiểu 70%"
+  "Trường hợp ngoại lệ nào sinh viên đề nghị rút học phần mà KHÔNG phải đóng học phí?": [
+    "Đề nghị rút trong tuần đầu tiên của học kỳ thứ 2"
   ],
-  "Tổ tư vấn tâm lý sinh viên, tiền thân của \"Điểm tựa yêu thương\", được thành lập chính thức vào ngày tháng năm nào?": [
-    "19/03/2019"
+  "Sinh viên đã hết thời gian học tập tối đa theo quy định nhưng chưa tốt nghiệp do thiếu môn GDQP-AN hoặc GDTC được gia hạn hoàn thiện trong thời gian tối đa bao lâu?": [
+    "Trong thời hạn tối đa 03 năm kể từ khi hết thời hạn học tập"
   ],
-  "\"Học phần tiên quyết\" được định nghĩa như thế nào trong Quy chế 2025?": [
-    "Phải hoàn thành học phần A (với mức điểm đạt) mới được dự lớp học phần B"
+  "Số đợt xét tốt nghiệp đại học trong một năm theo Quy chế đào tạo 2025 được quy định là bao nhiêu đợt?": [
+    "5 đợt"
   ],
-  "Thông điệp chính mà Giám đốc Đại học Bách khoa Hà Nội gửi đến sinh viên trong năm học 2025-2026 là gì?": [
-    "\"Học với đam mê – Sống có trách nhiệm\""
+  "Địa điểm làm thủ tục và nhận Giấy xác nhận ưu đãi giáo dục đào tạo cho sinh viên diện Chế độ chính sách là phòng nào?": [
+    "Phòng 102 - Nhà C1"
   ],
-  "Trong lời kêu gọi gửi đến sinh viên, Giám đốc nhấn mạnh điều gì là nền tảng cho tinh thần sáng tạo và học tập hiệu quả?": [
-    "Tự giác, kỷ luật và kiên trì"
+  "Đối với Chương trình đào tạo chuẩn có chuẩn đầu ra là tiếng Anh, yêu cầu trình độ tiếng Anh tối thiểu khi xét tốt nghiệp là gì?": [
+    "Có chứng chỉ tiếng Anh quy đổi tương đương từ Bậc 3 trở lên"
   ],
-  "Theo Quy chế, hành vi nào bị cấm trong khuôn viên Đại học?": [
-    "Hút thuốc, uống rượu, bia trong khuôn viên Đại học."
+  "Mức điểm rèn luyện (ĐRL) học kỳ 2025.2 tối thiểu đối với sinh viên Nhóm 2 đăng ký Học bổng Trần Đại Nghĩa là bao nhiêu điểm?": [
+    "ĐRL ≥ 70 điểm"
   ],
-  "Quy chế này áp dụng cho đối tượng nào tại Đại học Bách khoa Hà Nội?": [
-    "Sinh viên đại học hệ chính quy văn bằng thứ nhất."
+  "Chứng chỉ tiếng Trung HSK 6 kết hợp HSKK cao cấp tương ứng Bậc mấy trong Khung năng lực 6 bậc?": [
+    "Bậc 6"
   ],
-  "Quy định về công tác CVHT và QLLSV được áp dụng cho đối tượng nào tại ĐHBK Hà Nội?": [
-    "Sinh viên hệ đại học chính quy văn bằng thứ nhất."
+  "Sinh viên không thể dự thi cuối kỳ do bị ốm hoặc tai nạn có hồ sơ hợp lệ được hoãn thi (điểm I) và dự thi bù trong thời hạn tối đa bao lâu?": [
+    "Trong thời hạn 2 học kỳ chính tiếp theo"
   ],
-  "\"BKHUP Coworking Space\" được thành lập với mục đích chính là gì?": [
-    "Là nơi làm việc, gặp gỡ, kết nối cho các nhóm nghiên cứu trẻ, nhà sáng chế, nhà đầu tư và doanh nghiệp."
+  "Sinh viên xin nghỉ học tạm thời vì lý do cá nhân thông thường (ngoài y tế và nghĩa vụ quân sự) cần đáp ứng điều kiện tối thiểu nào?": [
+    "Đã học ít nhất một học kỳ tại trường"
   ],
-  "Sinh viên có hành vi uống rượu, bia trong giờ học lần thứ ba sẽ bị xử lý kỷ luật như thế nào?": [
-    "Đình chỉ học tập 1 học kỳ."
+  "Đối với học phần từ 2 tín chỉ trở lên, nếu sinh viên bị điểm quá trình là điểm liệt (dưới 3,0 hoặc dưới 5,0 tùy môn) thì điểm kết thúc học phần được tính ra sao?": [
+    "Điểm học phần là điểm F"
   ],
-  "Hành vi nào sau đây bị nghiêm cấm nhằm bảo vệ cơ sở vật chất và môi trường của Nhà trường?": [
-    "Tự ý viết vẽ, dán lên tường, bàn ghế trong phòng học, phòng ở ký túc xá và các khu vực khác."
+  "Sinh viên là con đẻ của người hoạt động cách mạng trước ngày 01/01/1945 thuộc đối tượng hưởng chính sách học phí nào?": [
+    "Miễn 100% học phí"
   ],
-  "Theo quy trình, ai là người chấm điểm rèn luyện cho sinh viên dựa trên kết quả tự đánh giá và minh chứng?": [
-    "Lớp trưởng và ban cán sự lớp."
+  "Điều kiện bắt buộc kể từ học kỳ 3 trở đi đối với sinh viên chưa học hoặc chưa được miễn các học phần ngoại ngữ cơ bản (NNCB) để được đăng ký môn khác là gì?": [
+    "Bắt buộc phải đăng ký học song hành các học phần NNCB tương ứng ở mỗi kỳ"
   ],
-  "Khi cần giải quyết các vấn đề liên quan đến chương trình đào tạo, đăng ký học phần, lịch thi, sinh viên cần liên hệ với đơn vị nào?": [
-    "Ban Đào tạo"
+  "Khái niệm \"Học phần học trước\" khác với \"Học phần tiên quyết\" ở điểm cốt lõi nào?": [
+    "Sinh viên chỉ cần đăng ký và học xong học phần A (có thể chưa đạt) là đã đủ điều kiện học học phần B"
   ],
-  "Theo quy định, Cố vấn học tập (CVHT) phải đáp ứng tiêu chuẩn nào sau đây?": [
-    "Là giảng viên đang công tác tại đơn vị quản ngành, có chuyên môn cao, kinh nghiệm giảng dạy và nắm vững quy chế đào tạo."
+  "Thời gian nghỉ học tạm thời tối đa cho phép đối với lý do cá nhân thông thường là bao nhiêu học kỳ chính?": [
+    "04 học kỳ chính (và được tính vào thời gian chậm tiến độ)"
   ],
-  "Ban nào có chức năng thực hiện chiến lược truyền thông tuyển sinh và tư vấn hướng nghiệp cho học sinh phổ thông?": [
-    "Ban Tuyển sinh – Hướng nghiệp"
+  "Việc miễn giảm học phí cho sinh viên diện chế độ chính sách được thực hiện căn cứ theo văn bản quy định nào của Chính phủ?": [
+    "Nghị định 238/2025/NĐ-CP"
   ],
-  "Một trong những \"Tip\" được gợi ý để làm tốt vai trò CVHT và QLLSV là gì?": [
-    "Chủ động lập kênh thông tin online (Zalo, Teams) với lớp và có lịch làm việc riêng với sinh viên học tập kém"
+  "Chứng chỉ tiếng Anh VSTEP trình độ B1 tương ứng với Bậc mấy trong Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam?": [
+    "Bậc 3"
   ],
-  "Đơn vị nào chịu trách nhiệm chính trong việc giám sát chung và đánh giá hiệu quả thực hiện công tác CVHT và QLLSV của các đơn vị trong toàn Đại học?": [
-    "Ban Công tác sinh viên."
+  "Điều 22 Luật Giáo dục số 43/2019/QH14 nghiêm cấm các hành vi nào trong cơ sở giáo dục?": [
+    "Xúc phạm nhân phẩm nhà giáo/người học; Xuyên tạc nội dung giáo dục; Gian lận trong học tập/thi; Hút thuốc, uống rượu bia, gây rối trật tự"
   ],
-  "Số tín chỉ tối đa mà sinh viên không thuộc diện cảnh báo học tập được đăng ký trong một học kỳ chính là bao nhiêu?": [
-    "24 TC"
+  "Điểm CPA từ 3,2 đến cận 3,6 khi quy đổi sang dải điểm thang 10 tương đương có kết quả là bao nhiêu?": [
+    "8,0 đến cận 9,0 "
   ],
-  "Theo quy tắc ứng xử trên mạng xã hội, sinh viên không được đăng tải hay tham gia bình luận về những nội dung nào sau đây?": [
-    "Các thông tin, hình ảnh ảnh hưởng xấu đến uy tín của Nhà trường.",
-    "Các lời lẽ tục tĩu, chửi bậy hoặc kích động tập thể.",
-    "Phàn nàn về chính sách, cá nhân với thái độ không xây dựng."
+  "Sinh viên thuộc Nhóm 3 trong đối tượng xét cấp Học bổng Trần Đại Nghĩa là ai?": [
+    "Sinh viên mồ côi cả cha và mẹ, không có nguồn nuôi dưỡng và không thuộc diện miễn 100% HP do quá 22 tuổi"
   ],
-  "Quy chế 2025 quy định có bao nhiêu đợt xét tốt nghiệp đại học trong một năm?": [
-    "4 đợt"
+  "Học bổng Trần Đại Nghĩa là học bổng của ĐHBK Hà Nội dành cho đối tượng sinh viên nào?": [
+    "Sinh viên có hoàn cảnh kinh tế gia đình đặc biệt khó khăn, có ý chí vươn lên trong học tập"
   ],
-  "Học bổng Gắn kết quê hương có giá trị là bao nhiêu cho mỗi Đồ án tốt nghiệp được xét cấp?": [
-    "10 triệu đồng"
+  "Sinh viên thực hiện khai báo thông tin liên lạc và nơi cư trú đầy đủ theo yêu cầu của Đại học được cộng bao nhiêu điểm rèn luyện?": [
+    "Cộng 4 điểm"
   ],
-  "Nếu GPA kỳ đánh giá cao hơn kỳ trước, sinh viên sẽ được cộng thêm bao nhiêu điểm cho sự nỗ lực trong học tập?": [
-    "4 điểm"
+  "Sinh viên đăng ký học vượt quá số tín chỉ chuẩn quy định trong một học kỳ có được giảm đơn giá TCHP không?": [
+    "Vẫn tính đúng đơn giá TCHP quy định của chương trình đào tạo"
   ],
-  "Sinh viên xin nghỉ học tạm thời vì lý do cá nhân (không phải ốm đau, tai nạn, quân sự) sẽ bị xét buộc thôi học nếu nghỉ quá bao nhiêu học kỳ chính?": [
-    "2 học kỳ chính"
+  "Sinh viên xin nghỉ học tạm thời vì lý do cá nhân sẽ bị xét buộc thôi học nếu tổng thời gian nghỉ vượt quá bao nhiêu học kỳ chính?": [
+    "Nghỉ quá 04 học kỳ chính"
   ],
-  "CVHT có quyền nào sau đây để hỗ trợ sinh viên?": [
-    "Đề nghị các đơn vị chức năng hỗ trợ giải quyết kịp thời các khó khăn của người học."
+  "Số điện thoại đường dây nóng (Hotline) chính thức của Tổ tư vấn và hỗ trợ sinh viên (SSU) là số nào?": [
+    "024 3869 2942"
   ],
-  "Theo Quy chế 2025, việc hạn chế khối lượng học tập đối với sinh viên bị cảnh báo học tập được áp dụng khi nào?": [
-    "Từ mức cảnh báo 2 trở lên và áp dụng cho cả năm học"
+  "Sinh viên tham gia đầy đủ Tuần sinh hoạt công dân do Nhà trường tổ chức được cộng bao nhiêu điểm rèn luyện?": [
+    "Cộng 6 điểm"
   ],
-  "Một trong những giải pháp được đề xuất đối với sinh viên thuộc diện cảnh báo học tập là gì?": [
-    "Việc đăng ký học tập cần có sự phối hợp với cố vấn học tập."
+  "Theo Quy chế đào tạo 2025, điểm trung bình toàn khóa (CPA tốt nghiệp) cho chương trình Kỹ sư được tính như thế nào?": [
+    "Chỉ tính dựa trên các học phần thuộc chương trình đào tạo kỹ sư đăng ký tốt nghiệp"
   ],
-  "Tổng điểm tối đa cho tiêu chí \"Điểm tham gia hoạt động chính trị, xã hội, văn hoá, thể thao\" (TC3) là bao nhiêu?": [
-    "25 điểm"
+  "Sau khi kết quả đánh giá điểm rèn luyện dự kiến được công bố, sinh viên có thời gian tối thiểu bao nhiêu ngày làm việc để nộp kiến nghị nếu có thắc mắc?": [                                                                                                                                                                     
+    "Kết quả dự kiến được công bố ít nhất 05 ngày làm việc trước khi chính thức công nhận để sinh viên kiến nghị"
   ],
-  "Ủy viên thường trực của Hội đồng khen thưởng và Hội đồng kỷ luật sinh viên là ai?": [
-    "Trưởng ban Ban Công tác sinh viên."
+  "Theo hướng dẫn Quản lý tài chính cá nhân trong Sổ tay sinh viên, tỷ lệ 20% thu nhập hàng tháng được khuyên dành cho mục đích nào?": [
+    "Dành cho tiết kiệm"
   ],
-  "Bác Hồ đã về thăm Trường Đại học Bách khoa Hà Nội bao nhiêu lần?": [
-    "2 lần"
+  "Mức học phí áp dụng đối với sinh viên nước ngoài tự chi trả kinh phí học tập được tính bằng bao nhiêu lần so với quy định chuẩn?": [
+    "1,5 lần"
   ],
-  "Khi học cùng lúc hai chương trình, các học phần chung giữa hai CTĐT sẽ được xử lý như thế nào cho CTĐT thứ hai?": [
-    "Được công nhận và tính điểm cho cả CTĐT thứ hai"
+  "Sinh viên được xét \"Miễn học\" học phần ngoại ngữ cơ bản sẽ được ghi ký hiệu điểm gì trên hệ thống?": [
+    "Điểm R"
   ],
-  "Mức trừ điểm nặng nhất (-50 điểm) áp dụng cho hành vi vi phạm nào?": [
-    "Vi phạm pháp luật thuộc nhóm tội danh hình sự."
+  "Sau khi có quyết định công nhận tốt nghiệp, Nhà trường sẽ cấp bằng tốt nghiệp cho sinh viên trong thời hạn bao lâu?": [
+    "Trong thời hạn 03 tháng"
   ],
-  "Đối với sinh viên bị kỷ luật cảnh cáo, quyết định kỷ luật sẽ chấm dứt hiệu lực sau bao lâu nếu không tái phạm?": [
-    "12 tháng."
+  "Thời gian hưởng Học bổng Chính phủ tối đa cho người học thuộc chương trình đào tạo Cử nhân là bao nhiêu năm?": [
+    "Không quá 04 năm"
   ],
-  "Theo Quy chế 2025, định nghĩa \"Nghỉ học tạm thời\" là việc nghỉ học có hiệu lực từ bao lâu?": [
-    "Từ 01 học kỳ trở lên"
+  "Mức học phí/1 TCHP của Chương trình đào tạo Kỹ sư chuyên sâu Trí tuệ nhân tạo tạo sinh (GenAI) được tính bằng mức học phí của chương trình cử nhân nào?": [
+    "Chương trình Khoa học dữ liệu và Trí tuệ nhân tạo (IT-E10)"
   ],
-  "Đạt danh hiệu \"Sinh viên 5 tốt\" từ cấp Đại học trở lên sẽ được ghi nhận bao nhiêu điểm?": [
-    "6 điểm"
+  "Trường hợp hai sinh viên có cùng điểm GPA ở cuối danh sách xét học bổng, tiêu chí ưu tiên nào được sử dụng để xếp hạng?": [
+    "Ưu tiên sinh viên có điểm rèn luyện cao hơn"
   ],
-  "Chức năng chính của Ban Công tác sinh viên là gì?": [
-    "Quản lý, tư vấn và hỗ trợ người học, tổ chức các hoạt động xã hội"
+  "Chứng chỉ Cambridge English Qualifications trình độ B2 First (FCE) đạt từ 160-179 điểm được quy đổi sang Bậc mấy?": [
+    "Bậc 4"
   ],
-  "Điểm chữ đặc biệt nào đã bị loại bỏ trong Quy chế 2025?": [
-    "Điểm K (điểm học phần khi nghỉ học tạm thời)"
+  "Nếu sinh viên học một học phần tiếng Anh cơ sở nhưng không đạt điểm kết thúc (bị điểm F), sinh viên phải xử lý ra sao?": [
+    "Phải tự đăng ký học lại học phần đó ở các học kỳ tiếp theo"
   ],
-  "Mức điểm tối đa cho tiêu chí \"Điểm học tập\" (TC1) trong khung đánh giá là bao nhiêu?": [
-    "25 điểm"
+  "Điểm chữ \"W\" xuất hiện trong bảng điểm của sinh viên mang ý nghĩa gì?": [
+    "Điểm học phần sinh viên đã đăng ký rút thành công trong thời gian quy định"
   ],
-  "Tổng điểm tối đa cho tiêu chí \"Điểm ý thức công dân trong quan hệ cộng đồng\" (TC4) là bao nhiêu?": [
-    "25 điểm"
+  "Sau khi bảo vệ thành công luận văn Thạc sĩ, học viên phải nộp quyển luận văn tốt nghiệp cho Thư viện Tạ Quang Bửu trong thời hạn bao nhiêu ngày?": [
+    "Trong thời hạn 20 ngày kể từ ngày bảo vệ thành công"
   ],
-  "Sinh viên \"Hiểu biết và chấp hành pháp luật của Nhà nước, quy định của nhà trường và nơi cư trú\" sẽ được cộng bao nhiêu điểm?": [
-    "8 điểm"
+  "Ứng dụng di động chính thức hỗ trợ sinh viên theo dõi Điểm rèn luyện, cập nhật minh chứng và đăng ký hoạt động ngoại khóa là gì?": [
+    "App iCTSV"
   ],
-  "Một trong các tiêu chí quan trọng để đánh giá hoạt động CVHT và QLLSV của đơn vị quản ngành là gì?": [
-    "Mức độ hài lòng của sinh viên đối với công tác này."
+  "Nhà trường có công nhận chứng chỉ tiếng Anh thi theo hình thức trực tuyến tại nhà (ví dụ: TOEFL iBT Home Edition) không?": [
+    "Không công nhận các chứng chỉ tiếng Anh cấp trên cơ sở thi trực tuyến tại nhà"
   ],
-  "Nội dung xử lý vi phạm đối với sinh viên trong Quy chế 2025 (Điều 20) có thay đổi lớn nào so với phiên bản 2023?": [
-    "Chuyển các quy định chi tiết sang một văn bản riêng (Quy chế công tác sinh viên)"
+  "Khi tham gia các sự kiện, hội họp trong nhà trường, sinh viên phải có mặt trước giờ khai mạc ít nhất bao nhiêu phút?": [
+    "Trước 15 phút"
   ],
-  "Ban Khoa học & Công nghệ có nhiệm vụ chính là gì?": [
-    "Quản lý, hỗ trợ các đơn vị và cá nhân trong hoạt động nghiên cứu và đổi mới sáng tạo"
+  "Mức điểm chữ \"P\" được áp dụng cho loại học phần nào trong chương trình đào tạo?": [
+    "Các học phần chỉ yêu cầu đạt, không tính vào điểm trung bình học tập"
   ],
-  "Quy định về trang phục khi đến trường của sinh viên Bách khoa là gì?": [
-    "Mặc trang phục giản dị, kín đáo, gọn gàng, lịch sự, phù hợp với môi trường học đường."
+  "Học viên cao học nghỉ học tạm thời vì lý do cá nhân thông thường được phép nghỉ thời gian tối đa là bao nhiêu?": [
+    "Tối đa 12 tháng (và được tính vào thời gian học tập)"
   ],
-  "Học bổng Trần Đại Nghĩa có mấy mức và giá trị của các mức đó là bao nhiêu?": [
-    "2 mức, tương ứng 50% và 100% học phí"
+  "Quy mô lớp học phần tối thiểu đối với chương trình đào tạo thạc sĩ theo Quy chế 2025 được điều chỉnh thành bao nhiêu học viên?": [
+    "5 học viên"
   ],
-  "Sinh viên có điểm CPA từ bao nhiêu trở lên có thể đề nghị xét chuyển vào CTĐT Tài năng sau khi kết thúc năm thứ hai?": [
-    "3.2"
+  "Học phần \"Tiếng Pháp PFIEV 1\" (mã FL1801) có khối lượng thời lượng quy định là bao nhiêu?": [
+    "3(1-4-0-6)"
   ],
-  "Theo các nguồn tài liệu, ngoài việc tư vấn cho sinh viên, \"Điểm tựa yêu thương\" còn hướng đến đối tượng nào sau đây?": [
-    "Giảng viên và cán bộ trong trường"
+  "Học phần \"FL1131 Tiếng Anh cơ sở 1\" có khối lượng thời lượng là bao nhiêu?": [
+    "3(3-0-0-6)"
   ],
-  "Điều kiện tối thiểu để sinh viên được xét cấp Học bổng Trao đổi sinh viên là gì?": [
-    "Từ năm thứ 3, CPA ≥ 3.2, ĐRL tích lũy ≥ 80"
+  "Sinh viên có quyền nộp đơn xin tự nguyện thôi học không và sau khi ra quyết định có được tiếp nhận trở lại không?": [
+    "Được xin thôi học nhưng không được tiếp nhận trở lại"
   ],
-  "Quỹ đầu tư mạo hiểm BKFund được xây dựng từ nguồn lực nào và có sứ mệnh chính là gì?": [
-    "Từ mạng lưới Cựu sinh viên, nhằm đầu tư, ươm tạo các startup của cán bộ, sinh viên, cựu sinh viên."
+  "Theo Quy chế đào tạo 2025, sinh viên bị hạn chế khối lượng đăng ký học tập khi nào?": [
+    "Khi bị cảnh báo học tập từ mức 2 trở lên tại học kỳ 1 của năm học"
   ],
-  "Sinh viên thuộc diện được vay vốn tại Ngân hàng chính sách có thể nhận được định mức vay tối đa là bao nhiêu?": [
-    "4.000.000đ/sinh viên/tháng."
+  "Sinh viên không nộp đủ học phí đúng thời hạn quy định sẽ bị xử lý như thế nào?": [
+    "Bị đình chỉ đăng ký học tập một học kỳ kế tiếp"
   ],
-  "Điểm đạt tối thiểu đối với học phần tốt nghiệp (Đồ án/Khóa luận tốt nghiệp Cử nhân) là điểm nào?": [
-    "Điểm D+"
+  "Chuẩn Ngoại ngữ 2 bắt buộc đối với sinh viên ngành Ngôn ngữ Anh hoặc Tiếng Anh KHKT&CN khi xét tốt nghiệp tối thiểu đạt Bậc mấy?": [
+    "Bậc 3"
   ],
-  "Sinh viên tham gia hỗ trợ công tác CVHT cần đáp ứng tiêu chuẩn nào?": [
-    "Là sinh viên từ năm thứ 3 trở đi, có kết quả học tập và rèn luyện từ loại giỏi trở lên."
+  "Trong Bảng đánh giá điểm rèn luyện sinh viên, Tiêu chí 1 \"Chấp hành pháp luật và nội quy, quy chế của nhà trường\" có điểm cộng tối đa là bao nhiêu?": [
+    "Tối đa 30 điểm"
   ],
-  "Cán bộ QLLSV có nhiệm vụ liên hệ với gia đình sinh viên trong trường hợp nào?": [
-    "Khi sinh viên bị cảnh báo học tập, bị xử lý kỷ luật, đình chỉ hoặc buộc thôi học."
+  "Sinh viên nghỉ học tạm thời do tai nạn hoặc điều trị bệnh dài ngày sẽ KHÔNG tính vào thời gian chậm tiến độ nếu tổng thời gian nghỉ không vượt quá bao nhiêu học kỳ?": [
+    "02 học kỳ chính"
   ],
-  "Hồ sơ quản lý quá trình học tập, rèn luyện của sinh viên KHÔNG bao gồm nội dung nào sau đây?": [
-    "Thông tin tài chính cá nhân của gia đình sinh viên."
+  "Theo quy tắc quy đổi, chứng chỉ APTIS ESOL trình độ A2 (chỉ thể hiện 1 mức năng lực) được xếp vào bậc cơ sở nào trong Bảng quy đổi?": [
+    "Bậc 2.1"
   ],
-  "Theo Quy chế 2025, người học có được thi lại cuối kỳ cho các học phần bị điểm F không?": [
-    "Không có lần thi lại đối với tất cả các hình thức đào tạo"
+  "Kết quả xét duyệt Học bổng KKHT được công bố chậm nhất vào tuần học thứ mấy của học kỳ cấp học bổng?": [
+    "Chậm nhất vào tuần học thứ 10"
   ],
-  "Điểm rèn luyện toàn khóa của sinh viên được tính như thế nào?": [
-    "Là trung bình cộng của điểm rèn luyện tất cả các học kỳ."
+  "Học viên thuộc chương trình tích hợp Cử nhân - Thạc sĩ được đăng ký học trước tối đa bao nhiêu tín chỉ thuộc CTĐT thạc sĩ khi còn ở giai đoạn cử nhân?": [
+    "Tối đa 15 tín chỉ"
   ],
-  "Nguyên tắc cốt lõi nào trong quản lý ngân sách được nhấn mạnh cho sinh viên?": [
-    "Luôn giữ cho chi tiêu nhỏ hơn thu nhập và tiết kiệm trước khi chi tiêu."
+  "Tân sinh viên K71 đăng ký Học bổng Trần Đại Nghĩa (Nhóm 1) theo điểm thi THPT yêu cầu điểm quy đổi thang 30 tối thiểu là bao nhiêu?": [
+    "Từ 24/30 trở lên"
   ],
-  "Trường hợp nào sau đây sinh viên sẽ KHÔNG được xét cấp học bổng KKHT?": [
-    "Đăng ký học 5 tín chỉ tại học kỳ cấp học bổng"
+  "Quy mô sức chứa tổng cộng của Ký túc xá Bách khoa hiện nay là bao nhiêu chỗ ở?": [
+    "4.500 chỗ ở (gồm 8 tòa nhà 4-5 tầng)"
   ],
-  "Theo Bộ Quy tắc ứng xử, hành vi nào sau đây sinh viên không được phép thực hiện trong giờ học khi chưa có sự đồng ý của giáo viên?": [
-    "Lên án những hành vi làm xấu đi mối quan hệ thầy – trò"
+  "Điều kiện về ngoại ngữ để sinh viên chương trình Việt - Pháp PFIEV được đăng ký nhận Phụ lục văn bằng kỹ sư của phía Pháp là gì?": [
+    "Đạt tối thiểu DELF B1 và Chứng chỉ TOEIC quốc tế (Nghe & Đọc) đạt từ 600 điểm trở lên"
   ],
-  "Nội dung giáo dục pháp luật đối với sinh viên tập trung vào các vấn đề nào?": [
-    "Các quy chế về học tập và rèn luyện; pháp luật về phòng chống tội phạm, tệ nạn xã hội; Luật an ninh mạng; đảm bảo trật tự an toàn giao thông."
+  "Sinh viên học cùng lúc hai chương trình phải đăng ký học chương trình thứ hai muộn nhất trước thời điểm xét tốt nghiệp chương trình thứ nhất là bao lâu?": [
+    "Muộn nhất 02 năm trước thời điểm xét tốt nghiệp"
   ],
-  "Sinh viên có hành vi đánh bạc lần thứ ba sẽ bị xử lý theo hình thức nào?": [
-    "Đình chỉ học tập 1 năm học."
+  "Trường hợp nào sau đây KHÔNG thuộc diện xét cấp Học bổng Trần Đại Nghĩa?": [
+    "Sinh viên bị kỷ luật từ mức cảnh cáo trở lên hoặc đã nhận học bổng khác trên 10 triệu đồng"
   ],
-  "Hành vi nào sau đây sinh viên KHÔNG được làm?": [
-    "Gian lận trong học tập, kiểm tra, thi cử như quay cóp, mang tài liệu không được phép vào phòng thi."
+  "Điều kiện học tập đối với sinh viên từ năm thứ hai trở đi để đăng ký Chương trình Vay vốn tín dụng ưu đãi STEM là gì?": [
+    "Kết quả học tập trung bình (GPA) năm học liền trước đạt loại Giỏi trở lên (từ 3,2 trở lên)"
   ],
-  "Theo Giám đốc, đâu KHÔNG phải là một trong bốn giá trị cốt lõi của người Bách khoa?": [
-    "Kỷ luật"
+  "Đối với Chương trình đào tạo Kỹ sư chuyên sâu Thiết kế vi mạch, mức học phí/1 TCHP được tính bằng mức học phí của chương trình cử nhân nào?": [
+    "Cử nhân Kỹ thuật Điện tử - Viễn thông"
   ],
-  "Yếu tố nào dùng để giới hạn số tín chỉ đăng ký của sinh viên đã bị loại bỏ trong Quy chế 2025?": [
-    "Tình trạng chưa đạt chuẩn ngoại ngữ theo trình độ năm học"
+  "Quy đổi khối lượng học tập hệ đại học chính quy: 1 TCHT của học phần \"Thí nghiệm / Thực hành thông thường\" bằng bao nhiêu Tín chỉ học phí (TCHP)?": [
+    "1,5 TCHP"
   ],
-  "Khi nào sinh viên bị nâng hai mức cảnh báo học tập trong một học kỳ?": [
-    "Khi có số TC không đạt trong học kỳ lớn hơn 16 hoặc tự ý bỏ học"
+  "Học viên tốt nghiệp đại học ngành phù hợp khi theo học chương trình Thạc sĩ phải học bổ sung tối đa bao nhiêu tín chỉ?": [
+    "Học bổ sung tối đa 15 tín chỉ"
   ],
-  "Theo Bộ Quy tắc ứng xử, sinh viên nên có thái độ như thế nào khi bạn bè có quan điểm hoặc lối sống khác biệt?": [
-    "Biết lắng nghe và tôn trọng sự khác biệt của nhau."
+  "Sinh viên không hoàn thành chương trình đào tạo Thạc sĩ được quyền đề nghị cấp chứng nhận các học phần đã tích lũy trong thời hạn bao lâu?": [
+    "Trong thời hạn 5 năm kể từ ngày khóa học kết thúc"
   ],
-  "Sinh viên có ý tưởng về khởi nghiệp và đổi mới sáng tạo có thể tìm kiếm sự hỗ trợ từ đơn vị nào?": [
-    "Trung tâm Sáng tạo & Khởi nghiệp sinh viên"
+  "Theo Bảng 2.1 Phụ lục II, chứng chỉ IELTS Academic đạt mức điểm 2.0 được quy đổi tương đương Bậc cơ sở nào?": [
+    "Không được quy đổi"
   ],
-  "Quy định đánh giá kết quả rèn luyện của sinh viên Đại học Bách khoa Hà Nội áp dụng cho đối tượng nào?": [
-    "Sinh viên đại học hình thức đào tạo chính quy, không bao gồm lưu học sinh nước ngoài."
+  "Quy tắc xếp bậc đối với chứng chỉ TOEIC 4 kỹ năng trong quy định công nhận ngoại ngữ K71 được tính dựa trên tiêu chí nào?": [
+    "Mức quy đổi được xác định theo kỹ năng có mức quy đổi thấp nhất trong bốn kỹ năng"
   ],
-  "Theo Khung đánh giá năm học 2024-2025, sinh viên có điểm GPA 3.5 sẽ được bao nhiêu điểm rèn luyện ở mục kết quả học tập?": [
-    "18 điểm"
+  "Đối với chương trình đào tạo Thạc sĩ, lớp học phần có quy mô dưới 5 học viên được xem xét tổ chức dưới hình thức nào?": [
+    "Mở lớp dưới hình thức đồ án, khóa luận hoặc tiểu luận chuyên đề thay thế giờ lên lớp"
   ],
-  "Đơn vị nào chịu trách nhiệm cung cấp kết quả điểm học tập và danh sách cảnh báo học tập cho Ban Công tác Sinh viên?": [
-    "Ban Đào tạo."
+  "Sinh viên có kết quả học tập và rèn luyện của học kỳ trước đó đạt mức Giỏi (GPA ≥ 3.2, ĐRL ≥ 80) được cộng bao nhiêu điểm rèn luyện?": [
+    "Cộng 4 điểm"
   ],
-  "Sinh viên hỗ trợ công tác CVHT được hưởng quyền lợi nào sau đây?": [
-    "Được cộng điểm rèn luyện vào cuối học kỳ nếu hoàn thành nhiệm vụ."
+  "Nếu sinh viên nộp đơn đề nghị rút học phần trong khoảng 7 tuần đầu của học kỳ chính và được giải quyết, mức học phí phải đóng là bao nhiêu?": [
+    "Phải đóng 50% học phí của học phần đó"
   ],
-  "Đơn vị nào chịu trách nhiệm quản lý, vận hành và khai thác cơ sở vật chất, hạ tầng công nghệ thông tin và cảnh quan của Đại học?": [
-    "Ban Cơ sở vật chất"
+  "Theo Thông tư số 40/2026/TT-BGDĐT được trích dẫn trong Sổ tay sinh viên, có bao nhiêu hình thức xử lý kỷ luật đối với sinh viên?": [
+    "04 hình thức (Khiển trách, Cảnh cáo, Đình chỉ học tập có thời hạn, Buộc thôi học)"
   ],
-  "Yêu cầu trọng tâm đối với công tác CVHT và QLLSV là gì?": [
-    "Tạo động lực học tập tích cực cho sinh viên."
+  "Điều kiện học lực để sinh viên hết năm thứ nhất được xem xét chuyển sang học một chương trình đào tạo khác là gì?": [
+    "CPA ≥ 2,5 (từ loại khá trở lên) và không bị cảnh báo học tập"
   ],
-  "Để đạt được Học bổng Khuyến khích học tập (KKHT) loại Xuất sắc, sinh viên cần đáp ứng điều kiện nào?": [
-    "GPA ≥ 3.6 và Điểm rèn luyện học kỳ ≥ 90 điểm "
+  "Học phí học phần \"Giáo dục Quốc phòng - An ninh\" được tính toán dựa trên đơn vị nào?": [
+    "Tính theo số TCHP quy đổi của các học phần GDQP-AN"
   ],
-  "Đại học Bách khoa Hà Nội đã được Nhà nước trao tặng Huân chương Hồ Chí Minh tổng cộng bao nhiêu lần?": [
-    "2 lần"
+  "Trường hợp nào sau đây sinh viên KHÔNG được quyền đề nghị phúc tra hoặc khiếu nại điểm?": [
+    "Bài thi trắc nghiệm trên máy tính"
   ],
-  "Hình thức kỷ luật \"Buộc thôi học\" được áp dụng trong trường hợp nào?": [
-    "Sinh viên đang trong thời gian bị đình chỉ học tập mà vẫn tiếp tục vi phạm kỷ luật hoặc vi phạm lần đầu nhưng có tính chất và mức độ đặc biệt nghiêm trọng."
+  "Theo quy tắc quy đổi từ dải điểm thang 4 sang thang điểm 10 tương đương, điểm CPA từ 2,0 đến cận 2,5 tương ứng với dải điểm thang 10 nào?": [
+    "5,5 đến cận 7,0 "
   ],
-  "Một sinh viên đang bị cảnh báo học tập mức 3 sẽ được hạ xuống mức 2 nếu đáp ứng điều kiện nào?": [
-    "Có số TC không đạt trong học kỳ nhỏ hơn hoặc bằng 4"
+  "Tân sinh viên đạt điểm bài kiểm tra HUST English Placement Test từ 475 đến dưới 545 điểm được xếp vào Nhóm trình độ nào?": [
+    "Nhóm 4"
   ],
-  "Đâu KHÔNG phải là nhiệm vụ của một Cố vấn học tập (CVHT)?": [
-    "Chủ trì họp lớp đánh giá kết quả rèn luyện của sinh viên."
+  "Mức định mức cho vay tối đa theo Chương trình Vay vốn đối với sinh viên có hoàn cảnh khó khăn là bao nhiêu?": [
+    "4.000.000đ / sinh viên / tháng"
   ],
-  "Theo Thông tư 10/2016/TT-BGDĐT, vai trò của CVHT và QLLSV là gì?": [
-    "Là cầu nối giữa Sinh viên với Nhà trường và gia đình."
+  "Điểm thay đổi quan trọng về cấu trúc học kỳ chính trong năm học từ Quy chế 2023 sang Quy chế 2025 là gì?": [
+    "Bỏ chia đợt A và B, một năm học bao gồm hai học kỳ chính và một học kỳ hè"
   ],
-  "Kết quả đánh giá rèn luyện của sinh viên được sử dụng vào mục đích nào sau đây?": [
-    "Xét duyệt học bổng, xét khen thưởng, xét tham gia các hoạt động giao lưu, trao đổi sinh viên quốc tế."
-  ],
-  "Sinh viên học cùng lúc hai chương trình phải đăng ký tốt nghiệp như thế nào?": [
-    "Đăng ký tốt nghiệp CTĐT thứ nhất trước, sau đó mới đến CTĐT thứ hai"
-  ],
-  "Sinh viên bị buộc thôi học trong trường hợp nào sau đây?": [
-    "Bị cảnh báo học tập mức 3 lần thứ hai liên tiếp"
-  ],
-  "Kết quả đánh giá rèn luyện của sinh viên được công bố công khai bao lâu trước khi ban hành quyết định chính thức?": [
-    "7 ngày"
-  ],
-  "Sinh viên nào được tặng danh hiệu “Sinh viên tốt nghiệp thủ khoa”?": [
-    "Sinh viên đạt danh hiệu “Sinh viên tốt nghiệp xuất sắc” có kết quả học tập toàn khóa cao nhất của đơn vị quản ngành và không có học phần không đạt."
-  ],
-  "Nhiệm vụ nào sau đây thuộc về cán bộ QLLSV?": [
-    "Kịp thời báo cáo lãnh đạo đơn vị về các sinh viên có kết quả học tập và rèn luyện yếu, kém."
-  ],
-  "Theo nguyên tắc quản lý chi tiêu hiệu quả được đề cập trong tài liệu, sinh viên nên phân bổ thu nhập của mình theo tỷ lệ nào?": [
-    "50% cho chi tiêu thiết yếu, 30% cho hưởng thụ, 20% cho tiết kiệm."
-  ],
-  "Nhà trường đã đưa ra những cam kết nào để đồng hành cùng sinh viên trong năm học mới?": [
-    "Đổi mới chương trình đào tạo, nâng cấp cơ sở vật chất, mở rộng hợp tác quốc tế"
-  ],
-  "Đại học Bách khoa Hà Nội đã vinh dự được Nhà nước trao tặng danh hiệu Anh hùng lao động trong thời kỳ đổi mới vào thời gian nào?": [
-    "Tháng 8/2000"
-  ],
-  "Một cán bộ lớp hoàn thành xuất sắc nhiệm vụ được tập thể công nhận sẽ được cộng bao nhiêu điểm?": [
-    "6 điểm"
-  ],
-  "Sinh viên không bị cấm thi của tất cả các học phần trong kỳ học sẽ được cộng bao nhiêu điểm?": [
-    "6 điểm"
-  ],
-  "Nếu người hướng dẫn hoặc người phản biện cho điểm ĐATN dưới 5, sinh viên sẽ bị xử lý như thế nào?": [
-    "Không được phép tham gia bảo vệ và điểm bảo vệ tại hội đồng là 0 điểm"
-  ],
-  "Hành vi nào sau đây bị nghiêm cấm trong ứng xử với bạn bè, đặc biệt trên không gian mạng?": [
-    "Sử dụng mạng xã hội để nói xấu, bôi nhọ hoặc kích động hận thù."
-  ],
-  "Theo sổ tay sinh viên 2025, sinh viên nên xây dựng một quỹ dự phòng với số tiền tối thiểu tương đương bao nhiêu tháng chi tiêu thiết yếu để sử dụng cho các trường hợp khẩn cấp như ốm đau, tai nạn?": [
-    "3 tháng."
-  ],
-  "Trong trường hợp nào sinh viên có thể đề nghị rút học phần mà không phải đóng học phí cho học phần đó?": [
-    "Rút học phần trong tuần đầu tiên của học kỳ 1"
-  ],
-  "Sinh viên vi phạm quy chế thi từ mức cảnh cáo trở lên sẽ bị trừ bao nhiêu điểm?": [
-    "-15 điểm"
-  ],
-  "Quy chế 2025 quy định điểm liệt đối với các học phần thông thường (không phải đồ án/khóa luận tốt nghiệp) là bao nhiêu?": [
-    "Dưới 3 điểm"
-  ],
-  "Đâu là một trong những sứ mệnh chính của Tổ tư vấn và hỗ trợ sinh viên?": [
-    "Hỗ trợ sinh viên gặp khó khăn về học tập và tâm lý, cải thiện phương pháp học và kỹ năng sống."
-  ],
-  "Việc tham gia chiến dịch tình nguyện \"mùa hè xanh\" được cộng bao nhiêu điểm?": [
-    "6 điểm"
-  ],
-  "Đại diện cho lớp sinh viên là ai?": [
-    "Ban cán sự lớp gồm lớp trưởng và tối đa 2 lớp phó."
-  ],
-  "Một trong những điều kiện để được xem xét mở \"lớp học phần rút gọn\" là gì?": [
-    "Sinh viên đã học học phần đó ít nhất 02 lần nhưng chưa đạt"
-  ],
-  "Trường hợp nào sinh viên không được xét khen thưởng?": [
-    "Sinh viên đang trong thời gian xem xét kỷ luật hoặc đang trong thời gian thi hành kỷ luật."
-  ],
-  "Đối với sinh viên bị kỷ luật khiển trách, quyết định kỷ luật sẽ chấm dứt hiệu lực sau bao lâu nếu không tái phạm?": [
-    "3 tháng."
-  ],
-  "Hình thức tư vấn nào sau đây KHÔNG được liệt kê trong các chương trình của Tổ tư vấn và hỗ trợ sinh viên?": [
-    "Tư vấn: Khởi nghiệp và đầu tư mạo hiểm"
-  ],
-  "Đơn vị nào là đầu mối, chủ trì hoạt động đánh giá kết quả rèn luyện cho sinh viên?": [
-    "Ban Công tác Sinh viên"
-  ],
-  "Đâu là một trong những khó khăn mà cán bộ làm công tác CVHT và QLLSV thường gặp phải?": [
-    "Hạn chế về mặt thời gian do đây là công tác kiêm nhiệm."
-  ],
-  "Khối lượng học tập tối thiểu đối với chương trình Tiến sĩ (dành cho người đã tốt nghiệp Thạc sĩ) theo Quy chế 2025 là bao nhiêu?": [
-    "90 tín chỉ"
-  ],
-  "Đơn vị quản ngành cần thành lập bộ phận nào để tổ chức và điều phối hoạt động tư vấn cho người học?": [
-    "Ban Cố vấn học tập."
-  ],
-  "Mức điểm tối đa cho tiêu chí \"Điểm về ý thức tổ chức kỷ luật\" (TC2) là bao nhiêu?": [
-    "25 điểm"
-  ],
-  "Sinh viên đạt chứng chỉ ngoại ngữ tương đương TOEIC 600 điểm trở lên sẽ được cộng bao nhiêu điểm rèn luyện?": [
-    "4 điểm"
-  ],
-  "Theo Phụ lục về khung xử lý kỷ luật, hành vi nhờ người khác vào phòng thi để thi thay hoặc vào phòng thi thay người khác lần đầu sẽ bị xử lý như thế nào?": [
-    "Buộc thôi học."
-  ],
-  "Danh hiệu “Sinh viên xuất sắc năm học” được tặng cho sinh viên đáp ứng điều kiện nào?": [
-    "Đồng thời có kết quả học tập và kết quả rèn luyện trung bình năm học đạt loại xuất sắc."
-  ],
-  "Sinh viên được hưởng quyền lợi nào sau đây theo Quy chế?": [
-    "Được sử dụng học liệu, thiết bị và phương tiện phục vụ học tập, nghiên cứu khoa học theo quy định."
-  ],
-  "Hành vi thi hộ sẽ bị trừ bao nhiêu điểm rèn luyện?": [
-    "-50 điểm"
-  ],
-  "Sinh viên có nhu cầu tư vấn trực tiếp có thể tìm đến Tổ tư vấn và hỗ trợ sinh viên (\"Điểm tựa yêu thương\") tại địa chỉ nào?": [
+  "Địa chỉ Văn phòng Tổ tư vấn và hỗ trợ sinh viên (SSU) chuyên tư vấn tâm lý và hỗ trợ học tập nằm tại phòng nào?": [
     "Phòng 101 - Nhà C1"
+  ],
+  "Mức điểm trung bình tích lũy (CPA) tối thiểu sinh viên cần đạt khi xét công nhận tốt nghiệp đại học là bao nhiêu?": [
+    "CPA ≥ 2,00"
+  ],
+  "Bảng quy đổi chứng chỉ ngoại ngữ ban hành kèm Quy định K71 có áp dụng cho sinh viên các khóa cũ (từ K70 trở về trước) không?": [
+    "Áp dụng cho toàn bộ sinh viên các khóa đối với chứng chỉ cấp từ ngày quy định có hiệu lực; nếu mức mới khác cũ thì áp dụng mức cao hơn"
+  ],
+  "Sinh viên thuộc Nhóm 6 trong phân loại ngoại ngữ đầu vào sẽ nhận được quyền lợi gì?": [
+    "Được miễn học toàn bộ các học phần Tiếng Anh cơ sở (từ FL1131 đến FL1135)"
+  ],
+  "Sinh viên K71 đăng ký học các lớp tiếng Anh tăng cường/dịch vụ ngoài giờ có phải nộp học phí không?": [
+    "Phải nộp học phí theo quy định đối với lớp học phần dịch vụ/tăng cường"
+  ],
+  "Việc xác nhận Giấy vay vốn ngân hàng cho sinh viên được Ban Công tác sinh viên trả kết quả tại địa điểm nào?": [
+    "Nhà B8"
+  ],
+  "Sinh viên là con đẻ hoặc con nuôi hợp pháp của Người có công với cách mạng được hưởng mức hỗ trợ miễn giảm học phí là bao nhiêu?": [
+    "Miễn 100% học phí"
+  ],
+  "Mức Học bổng Chính phủ hỗ trợ hàng tháng đối với Học viên Thạc sĩ thuộc Chương trình đào tạo tài năng là bao nhiêu?": [
+    "7.400.000 đồng / tháng"
+  ],
+  "Sinh viên là người dân tộc thiểu số rất ít người ở vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn được hưởng mức hỗ trợ học phí ra sao?": [
+    "Miễn 100% học phí"
+  ],
+  "Sinh viên mồ côi cả cha lẫn mẹ thuộc Nhóm 3 khi đăng ký Học bổng Trần Đại Nghĩa được hưởng mức học bổng là bao nhiêu?": [
+    "100% học phí của các học phần trong chương trình đào tạo tại học kỳ xét"
+  ],
+  "Tiêu chuẩn xét Học bổng KKHT loại Khá (loại C) yêu cầu mức GPA và ĐRL tối thiểu là bao nhiêu?": [
+    "GPA ≥ 2,5 và ĐRL ≥ 65"
+  ],
+  "Tiêu chuẩn về điểm rèn luyện (ĐRL) học kỳ tối thiểu để đạt Học bổng KKHT loại B (Giỏi) là bao nhiêu điểm?": [
+    "ĐRL ≥ 80 điểm"
+  ],
+  "Tổ tư vấn tâm lý sinh viên (tiền thân của Tổ tư vấn và hỗ trợ sinh viên SSU) được thành lập vào ngày tháng năm nào?": [
+    "Ngày 26/03/2019"
+  ],
+  "Đối với sinh viên Nhóm 4 (gặp tai nạn, rủi ro đột xuất), Học bổng Trần Đại Nghĩa hỗ trợ các mức tiền mặt cố định là bao nhiêu?": [
+    "5 triệu đồng và 10 triệu đồng"
+  ],
+  "Sinh viên có cha hoặc mẹ bị tai nạn lao động hưởng trợ cấp thường xuyên được hưởng mức giảm học phí là bao nhiêu?": [
+    "Giảm 50% học phí"
+  ],
+  "Thời hạn Giám đốc Đại học ra quyết định công nhận tốt nghiệp và cấp bằng tốt nghiệp Thạc sĩ cho học viên đủ điều kiện là bao lâu?": [
+    "Trong thời hạn 02 tháng tính từ thời điểm đáp ứng đủ điều kiện"
+  ],
+  "Kết quả rèn luyện học kỳ đạt từ 80 điểm đến 89 điểm được xếp loại gì?": [
+    "Loại Tốt"
+  ],
+  "Mức học phí học lại học phần đối với Nghiên cứu sinh trình độ Tiến sĩ được quy định cụ thể là bao nhiêu?": [
+    "850.000 đồng / TCHP"
+  ],
+  "Mức học phí áp dụng cho các lớp học phần tổ chức theo yêu cầu riêng của 01 sinh viên (lớp đặc biệt) do cấp nào quyết định?": [
+    "Giám đốc Đại học Bách khoa Hà Nội quyết định"
+  ],
+  "Ký hiệu \"ĐK\" trong bảng danh mục học phần tiếng Anh cơ bản có ý nghĩa gì?": [
+    "Sinh viên tự đăng ký học song hành với các học phần của CTĐT tại kỳ tương ứng nếu chưa học hoặc chưa được miễn"
+  ],
+  "Trường hợp sinh viên có đơn xin nghỉ học tạm thời hoặc thôi học được chấp thuận trong 7 tuần đầu của học kỳ chính thì nghĩa vụ học phí là bao nhiêu?": [
+    "Phải đóng 50% học phí của học kỳ đó"
+  ],
+  "Mức điểm IELTS Academic đạt từ 8.5 đến 9.0 được Bảng 2.1 quy đổi tương đương Bậc mấy theo Khung 6 bậc?": [
+    "Bậc 6 (CEFR C2)"
+  ],
+  "Học phần \"FL1135 Tiếng Anh cơ sở 5\" có khối lượng thời lượng quy định là bao nhiêu?": [
+    "4(2-4-0-8)"
+  ],
+  "Kênh thanh toán học phí trực tuyến chính thức và an toàn dành cho sinh viên ĐHBK Hà Nội là gì?": [
+    "Nộp trên Cổng thông tin sinh viên ctt.hust.edu.vn / app eHUST qua tài khoản ngân hàng liên kết"
+  ],
+  "Sinh viên vi phạm quy chế thi từ mức cảnh cáo trở lên sẽ bị trừ bao nhiêu điểm rèn luyện (ĐRL)?": [
+    "Trừ 10 điểm"
+  ],
+  "Để đạt Học bổng KKHT loại Xuất sắc (loại A), sinh viên cần đạt tiêu chuẩn GPA và điểm rèn luyện (ĐRL) học kỳ tối thiểu là bao nhiêu?": [
+    "GPA ≥ 3,6 và ĐRL ≥ 90"
+  ],
+  "Chứng chỉ tiếng Hàn TOPIK 4 tương ứng với Bậc mấy trong Khung năng lực 6 bậc?": [
+    "Bậc 4"
+  ],
+  "Hành vi nào sau đây bị NGHIÊM CẤM đối với sinh viên trong giờ học trên lớp?": [
+    "Tự ý ghi âm, ghi hình, chụp ảnh trong giờ học khi chưa được sự đồng ý của giáo viên"
+  ],
+  "Địa điểm tiếp nhận hồ sơ Chế độ chính sách và phát Giấy xác nhận ưu đãi giáo dục cho sinh viên là phòng nào?": [
+    "Phòng 101 - Nhà B8"
+  ],
+  "Giá trị của Học bổng KKHT loại Xuất sắc (loại A) bằng bao nhiêu lần so với loại Khá (loại C)?": [
+    "Bằng 1,5 lần"
+  ],
+  "Học phần \"FL1132 Tiếng Anh cơ sở 2\" có thời lượng và số tín chỉ quy định là bao nhiêu?": [
+    "4(2-4-0-8)"
+  ],
+  "Chuẩn tiếng Anh đầu ra đối với sinh viên chương trình liên kết đào tạo với Đại học TROY (Hoa Kỳ) khi xét tốt nghiệp là gì?": [
+    "Chứng chỉ IELTS Academic 6.0 trở lên (hoặc TOEFL iBT tương đương)"
+  ],
+  "Theo Quy chế đào tạo 2025 (sửa đổi), điểm liệt đối với học phần đồ án tốt nghiệp/khóa luận tốt nghiệp cử nhân, đồ án tốt nghiệp kỹ sư là bao nhiêu?": [
+    "Dưới 5,0"
+  ],
+  "Học bổng Chính phủ cấp cho người học được Nhà trường thực hiện chi trả theo định kỳ nào?": [
+    "Chi trả định kỳ theo từng tháng dựa trên số tháng thực học"
+  ],
+  "Quy đổi 1 TCHT học phần \"Thực tập tốt nghiệp\" hệ đại học chính quy tương ứng bằng bao nhiêu TCHP?": [
+    "2,5 TCHP"
+  ],
+  "Chứng chỉ IELTS Academic đạt từ 7.0 đến 8.0 được quy đổi tương đương với Bậc mấy theo Phụ lục II Quy định ngoại ngữ K71?": [
+    "Bậc 5"
+  ],
+  "Cổng thông tin chính thức hỗ trợ hướng nghiệp, tìm kiếm việc làm thêm và thực tập dành cho sinh viên Bách khoa có tên là gì?": [
+    "Cổng thông tin HustWork (hustwork.hust.edu.vn)"
+  ],
+  "Sinh viên nộp chậm học phí học kỳ hè quá thời hạn quy định sẽ bị xử lý như thế nào?": [
+    "Bị hủy kết quả đăng ký học phần trong học kỳ hè đó"
+  ],
+  "Sinh viên đạt danh hiệu \"Sinh viên 5 tốt\" từ cấp Đại học trở lên được cộng bao nhiêu điểm rèn luyện?": [
+    "Cộng 4 điểm"
+  ],
+  "Thời gian Ban Công tác sinh viên thông báo công khai kế hoạch đăng ký xét Học bổng Trao đổi sinh viên tối thiểu là bao lâu để người học chuẩn bị?": [
+    "Tối thiểu 02 tuần"
+  ],
+  "Hệ số học phí áp dụng đối với các lớp học lại tổ chức ngoài kế hoạch theo đề nghị của sinh viên có sĩ số dưới 10 sinh viên là bao nhiêu?": [
+    "Hệ số 2,0"
+  ],
+  "Không gian sinh hoạt chung dành cho sinh viên nội trú Ký túc xá nằm tại tầng mấy của tòa nhà B10?": [
+    "Tầng 5 - Tòa nhà B10"
+  ],
+  "Ký hiệu điểm chữ \"X\" trong hệ thống quản lý học tập đại diện cho trạng thái nào?": [
+    "Điểm học phần chưa hoàn thiện do thiếu dữ liệu đánh giá"
+  ],
+  "Quỹ học bổng Khuyến khích học tập (KKHT) KHÔNG xét cấp cho sinh viên đăng ký ít hơn bao nhiêu tín chỉ trong học kỳ cấp học bổng?": [
+    "Đăng ký ít hơn 12 tín chỉ"
+  ],
+  "Việc nộp chứng chỉ ngoại ngữ quốc tế để quy đổi miễn học và công nhận chuẩn đầu ra được sinh viên thực hiện qua kênh nào?": [
+    "Đăng ký trực tuyến trên hệ thống quản lý đào tạo (eHUST/QLDT) theo các đợt thông báo"
+  ],
+  "Hồ sơ đăng ký xét Học bổng Trần Đại Nghĩa bắt buộc phải có giấy tờ xác nhận của cơ quan nào?": [
+    "Mẫu đơn đăng ký có xác nhận hoàn cảnh khó khăn của Ủy ban nhân dân địa phương nơi gia đình cư trú"
+  ],
+  "Các phòng Học nhóm dành cho sinh viên tại Thư viện Tạ Quang Bửu nằm từ phòng 501 đến phòng 508 thuộc tầng mấy?": [
+    "Tầng 5 Thư viện Tạ Quang Bửu"
+  ],
+  "Sinh viên đang chịu hình thức kỷ luật nào tại thời điểm xét học bổng KKHT sẽ KHÔNG được xét cấp học bổng?": [
+    "Chịu hình thức kỷ luật từ mức Khiển trách trở lên"
+  ],
+  "Quỹ học bổng Khuyến khích học tập (KKHT) được trích từ nguồn nào và chiếm tỷ lệ bao nhiêu?": [
+    "Trích từ nguồn học phí, bằng 8% học phí của học kỳ lấy điểm xét cấp học bổng"
+  ],
+  "Kết quả bài thi kiểm tra tiếng Anh đầu khóa (HUST English Placement Test) đối với tân sinh viên K71 được sử dụng để làm gì?": [
+    "Phân loại trình độ đầu vào, xếp lớp và xét miễn các học phần ngoại ngữ cơ bản"
+  ],
+  "Thời gian hưởng Học bổng Chính phủ tối đa cho sinh viên thuộc chương trình đào tạo Kỹ sư (từ 150 tín chỉ trở lên) là bao nhiêu năm?": [
+    "Không quá 05 năm"
+  ],
+  "Điều kiện về điểm CPA để sinh viên đại học đề nghị xét chuyển vào học Chương trình đào tạo Tài năng sau năm thứ hai là gì?": [
+    "CPA ≥ 3,2"
+  ],
+  "Địa chỉ văn phòng làm việc của Đoàn Thanh niên Đại học Bách khoa Hà Nội nằm tại phòng nào?": [
+    "Phòng 208 - Tòa nhà C2"
+  ],
+  "Sinh viên có hành vi nộp chứng chỉ ngoại ngữ giả mạo để gian lận chuẩn đầu ra sẽ chịu mức xử lý kỷ luật nào?": [
+    "Bị đình chỉ học tập hoặc buộc thôi học tùy mức độ nghiêm trọng"
+  ],
+  "Quyết định ban hành Quy định về phân loại trình độ đầu vào và chuẩn ngoại ngữ K71 do lãnh đạo nào ký phê duyệt?": [
+    "Phó Giám đốc GS.TS. Vũ Văn Yêm"
+  ],
+  "Sinh viên bị buộc thôi học do kết quả học tập yếu kém có quyền đề nghị chuyển sang hình thức đào tạo nào của Nhà trường?": [
+    "Chuyển sang hình thức Vừa làm vừa học (VLVH)"
+  ],
+  "Sinh viên từ K67 đến K70 (Nhóm 2) đăng ký Học bổng Trần Đại Nghĩa cần đạt mức GPA học kỳ 2025.2 tối thiểu là bao nhiêu?": [
+    "GPA ≥ 2,0"
+  ],
+  "Trong buổi bảo vệ Đồ án tốt nghiệp tại hội đồng, nếu có 1 thành viên hội đồng cho điểm dưới 5 thì điểm bảo vệ cuối kỳ của sinh viên được tính như thế nào?": [
+    "Bị tính là điểm liệt và chỉ được ghi tối đa là 4,9 điểm"
+  ],
+  "Bài thi kiểm tra trình độ tiếng Anh đầu vào (Placement Test) do ĐHBK Hà Nội tổ chức có giá trị sử dụng trong thời gian bao lâu?": [
+    "Chỉ có giá trị để phân loại trình độ đầu vào và xếp lớp học phần NNCB năm thứ nhất"
+  ],
+  "Văn bản pháp lý của Chính phủ quy định về chính sách học phí, miễn giảm học phí áp dụng cho năm học 2026-2027 tại ĐHBK Hà Nội là văn bản nào?": [
+    "Nghị định 238/2025/NĐ-CP ngày 03/09/2025"
+  ],
+  "Cơ quan nào chịu trách nhiệm đánh giá khả năng và mức độ ứng dụng thực tế của đề tài ĐATN trong quy trình xét cấp Học bổng \"Gắn kết quê hương\"?": [
+    "Hội đồng chấm Đồ án tốt nghiệp"
+  ],
+  "Sinh viên đã có quyết định buộc thôi học, nếu thi lại và trúng tuyển mới vào trường thì việc công nhận học phần cũ được xử lý ra sao?": [
+    "Phải học lại toàn bộ chương trình, ngoại trừ học phần Giáo dục quốc phòng - an ninh đã được cấp chứng chỉ"
+  ],
+  "Theo Quy chế đào tạo 2025, điều kiện trùng lặp nội dung chuyên môn tối thiểu giữa hai học phần để được xem là \"học phần tương đương\" là bao nhiêu?": [
+    "80%"
+  ],
+  "Chứng chỉ tiếng Nhật JLPT trình độ N2 tương đương với Bậc mấy theo Khung 6 bậc?": [
+    "Bậc 4"
+  ],
+  "Địa chỉ phòng Mượn giáo trình học tập tại Thư viện Tạ Quang Bửu là phòng nào?": [
+    "Phòng 111 Thư viện Tạ Quang Bửu"
+  ],
+  "Khối lượng học tập tối đa được xem xét công nhận và chuyển đổi tín chỉ từ một cơ sở đào tạo khác không được vượt quá bao nhiêu % khối lượng toàn khóa?": [
+    "Không vượt quá 50%"
+  ],
+  "Chính sách hỗ trợ phần chênh lệch học phí cho sinh viên diện Chế độ chính sách (CĐCS) KHÔNG áp dụng cho khối chương trình nào?": [
+    "Chương trình thạc sĩ"
+  ],
+  "Chứng chỉ Aptis ESOL (đủ 4 kỹ năng) đạt trình độ B2 được quy đổi tương đương Bậc mấy?": [
+    "Bậc 4"
+  ],
+  "Yêu cầu về các kỹ năng đối với chứng chỉ tiếng Anh quốc tế được sử dụng để xét chuẩn ngoại ngữ đầu ra là gì?": [
+    "Phải đánh giá đầy đủ 4 kỹ năng (Nghe, Nói, Đọc, Viết) và còn hiệu lực trong vòng 2 năm"
+  ],
+  "Trường hợp lớp học phần bị hủy do không đủ sĩ số tối thiểu theo quy định thì số tiền học phí sinh viên đã nộp xử lý ra sao?": [
+    "Được hoàn trả hoặc trừ vào nghĩa vụ học phí của học kỳ tiếp theo"
+  ],
+  "Sinh viên tự ý chuyển sang ngành học KHÔNG thuộc danh mục ưu tiên của Nghị định 179 sẽ bị xử lý học bổng ra sao?": [
+    "Không tiếp tục được hưởng học bổng và phải hoàn trả kinh phí đã nhận thông qua cơ sở đào tạo"
+  ],
+  "Thời gian điều chỉnh đăng ký học phần bổ sung vào các lớp học phần đã mở ở đầu học kỳ chính kéo dài trong bao lâu?": [
+    "Kéo dài trong 2 tuần đầu"
+  ],
+  "Theo Quy chế đào tạo 2025, \"Lớp học phần rút gọn\" dành cho sinh viên học lại được mở khi đáp ứng những điều kiện nào?": [
+    "Học lại ít nhất 02 lần chưa đạt, điểm quá trình từ 2,0 trở lên, sinh viên từ năm thứ 3 trở lên"
+  ],
+  "Sinh viên nghỉ học tạm thời phải nộp đơn đề nghị tiếp nhận trở lại học chậm nhất vào thời điểm nào?": [
+    "Chậm nhất 01 tuần trước khi bắt đầu học kỳ mới"
+  ],
+  "Mức phí thực hiện lại 01 chuyên đề tiến sĩ đối với nghiên cứu sinh được quy định cụ thể là bao nhiêu?": [
+    "2.200.000 đồng / chuyên đề"
+  ],
+  "Học phí các học phần thuộc hệ Vừa làm vừa học hoặc Sau đại học được thực hiện tại cơ sở liên kết ngoài Đại học được tính bằng bao nhiêu % so với chương trình chuẩn?": [
+    "Bằng 90% học phí chương trình chuẩn, cộng thêm kinh phí phối hợp đào tạo"
+  ],
+  "Mức điểm đạt đối với các học phần thuộc chương trình đào tạo cử nhân và kỹ sư (ngoại trừ học phần tốt nghiệp) là từ mức điểm chữ nào?": [
+    "Từ điểm D trở lên"
+  ],
+  "Quy định về \"Học phần song hành\" áp dụng cho hai học phần A và B được hiểu như thế nào?": [
+    "Sinh viên phải theo học học phần A trước hoặc học đồng thời với học phần B"
+  ],
+  "Khi đăng ký tốt nghiệp đại học, sinh viên được chọn số tín chỉ tích lũy so với yêu cầu của CTĐT như thế nào?": [
+    "Chỉ chọn đủ hoặc không nhiều hơn 3 tín chỉ so với yêu cầu của chương trình"
+  ],
+  "Quy định về phương tiện giao thông di chuyển vào khuôn viên Trường Bách khoa như thế nào?": [
+    "Xe đạp, xe máy, ô tô phải giảm tốc độ, quan sát và gửi xe đúng nơi quy định; xe taxi KHÔNG được vào trường"
+  ],
+  "Sinh viên được phép đăng ký học chương trình đào tạo thứ hai (bằng kép) sớm nhất khi nào?": [
+    "Khi đã được xếp trình độ năm thứ hai của chương trình thứ nhất"
+  ],
+  "Trọng số của điểm thi cuối kỳ đối với học phần từ 2 tín chỉ trở lên được quy định nằm trong khoảng nào?": [
+    "Từ 0,5 đến 0,8"
+  ],
+  "Mức học phí đối với các học phần học ở học kỳ hè được tính như thế nào so với học kỳ chính?": [
+    "Bằng 1,5 lần mức học phí kỳ chính"
+  ],
+  "Học phí của các lớp \"Học phần rút gọn\" (cho sinh viên học lại) được tính bằng bao nhiêu so với lớp bình thường?": [
+    "Bằng 50%"
+  ],
+  "Trụ sở làm việc của Tổ hỗ trợ triển khai hệ thống iCTSV đặt tại vị trí nào trong trường?": [
+    "Phòng 102 - Nhà D3-5"
   ],
 
   //đáp án pháp luật 2025.1
@@ -830,7 +977,7 @@ async function autoFillFormBasedOnQuestion() {
     console.error("Không tìm thấy ô nhập liệu!");
   }
   const spans = document.querySelectorAll(".text-format-content");
-  
+
   // // Bắt ngoại lệ từ form
   // const exep1 = document.querySelector(`[value="Kết luận 121, 126 và 127 của Trung ương và Bộ Chính trị"]`);
   // const exep2 = document.querySelector(`[value='"Diệt giặc đói, giặc dốt, giặc ngoại xâm"']`);
@@ -856,7 +1003,7 @@ async function autoFillFormBasedOnQuestion() {
   //     console.error('Error occurred while clicking:', error);
   //   }
   // };
-  
+
   // clickOption(exep1);
   // clickOption(exep2);
   // clickOption(exep3);
